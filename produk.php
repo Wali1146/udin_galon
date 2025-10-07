@@ -50,7 +50,7 @@
   echo "</table><br>";
 
   do {
-    echo "hitung mundur: $angka <br>";
+    echo "hitung mundur: $angka <br><br>";
     $angka--;
   } while ($angka >= 1);{
     echo "meluncur........ DUAR!!! <br>";
