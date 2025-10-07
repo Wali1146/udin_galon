@@ -13,6 +13,8 @@
   $harga_diskon = $harga_produk - ($harga_produk * $diskon);
   $nilai = 50;
   $hari = "jumat";
+  $buah = ["mangga muda", "mangga arum manis", "mangga golek", "mangga indramayu"];
+  $angka = 6;
 
   // Struktur Kontrol
   if ($nilai > 90) {
@@ -35,10 +37,27 @@
     default;
       echo "Belum ada promo hari ini.";
   }
-  ?>
 
+  for ($i = 1; $i <= 10; $i++) {
+    echo "<p>$i. Saya belajar php dan itu menyenangkan!</p>";
+  }
+
+  echo "<table border = 1><tr><th>No</th><th>Nama Buah</th></tr>";
+  foreach ($buah as $mangga) {
+    echo "<tr><td>$angka</td><td>$mangga</td></tr>";
+    $angka++;
+  }
+  echo "</table><br>";
+
+  do {
+    echo "hitung mundur: $angka <br>";
+    $angka--;
+  } while ($angka >= 1);{
+    echo "meluncur........ DUAR!!! <br>";
+  }
+  ?>
   <h2> <?php echo $nama_produk ?> </h2>
-  <p> <?php echo $harga_produk ?> </p>
-  <p> <?php echo $harga_diskon ?> </p>
+  <p> <?php echo "Harga normal: $harga_produk" ?> </p>
+  <p> <?php echo "Harga diskon: $harga_diskon" ?> </p>
 </body>
 </html>
