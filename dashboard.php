@@ -1,10 +1,8 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION["role"])){
-    header("Location: login.php");
-    exit;
+if(!isset($_SESSION['unique_id'])){
+    header("location: login.php");
 }
-$role = $_SESSION["role"];
-echo "Selamat datang, " . $_SESSION['user_login'] . "!";
+echo "Selamat datang, ".$_SESSION['name'].". Anda adalah ".$_SESSION['role'];
 ?>
-<br><a href="logout.php">Logout</a>
+<br><a href="logout.php">Log out</a>

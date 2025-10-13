@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['unique_id']) || $_SESSION['role'] != 'superadmin'){
+    header("location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
