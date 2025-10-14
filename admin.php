@@ -3,6 +3,7 @@ session_start();
 if(!isset($_SESSION['unique_id']) || $_SESSION['role'] != 'admin'){
     header("location: login.php");
 }
+echo "Selamat datang, ".$_SESSION['name'].". Anda adalah ".$_SESSION['role'];
 ?>
 
 <!DOCTYPE html>
@@ -14,5 +15,6 @@ if(!isset($_SESSION['unique_id']) || $_SESSION['role'] != 'admin'){
 </head>
 <body>
     <h1>Anda admin</h1>
+    <a href="logout.php">Log out</a>
 </body>
 </html>
